@@ -1,12 +1,138 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>왼쪽 사람은 타이틀을 바꿔</title>
-</head>
-<body>
-
-</body>
+<html>
+  <head>
+    <meta lang="ko" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>RPG 게임 캐릭터 데이터</title>
+    <link rel="stylesheet" href="./css/0112.css" />
+  </head>
+  <body>
+    <header>
+      <h1>RPG 게임 캐릭터 데이터</h1>
+    </header>
+    <main>
+      <section id="inputSection">
+        <fieldset class="inputField">
+            <legend>캐릭터 정보 입력</legend>
+          <div class="inputItem">
+            <div class="text-wrapper">이름</div>
+            <div class="div">
+              <input type="hidden" id="id" value="0"/>
+              <input type="text" id="name" class="inputText" maxlength="12"/>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">클래스</div>
+            <div class="div">
+              <select id="cls" class="selectCombo">
+                <option value="W">전사</option>
+                <option value="M">마법사</option>
+                <option value="R">궁수</option>
+                <option value="S">도적</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">성별</div>
+            <div class="div">
+              <select id="sx" class="selectCombo">
+                <option value="male">남자</option>
+                <option value="female">여자</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">HP</div>
+            <div class="div">
+             <input type="number" id="hp" class="inputNumber" min="0" max="999999" value="0"/>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">MP</div>
+            <div class="div">
+             <input type="number" id="mp" class="inputNumber" min="0" max="999999" value="0"/>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">STR</div>
+           <select id="str" class="selectCombo">
+                <option value="S">STR</option>
+                <option value="I">INT</option>
+                <option value="D">DEX</option>
+                <option value="L">LUX</option>
+              </select>
+            </div>
+          </div>
+          <div class="inputItem">
+            <div class="text-wrapper">캐릭터 생성일</div>
+            <div class="div">
+              <input type="text" id="birthDate" class="inputText"/>
+            </div>
+          </div>
+          <div class="inputImage">
+            <img
+              id="showImage"
+              src="https://pimg.mk.co.kr/news/cms/202504/06/news-p.v1.20250404.ad221f845db2489a86c2ff50f32c53fa_P1.png"
+              alt="게임 대표 이미지"
+            />
+          </div>
+          <div class="inputButtons">
+             <div class="btn-wrapper">
+             <button class="btn" id="btnAdd">추가</button>
+            </div>
+             <div class="btn-wrapper">
+             <button class="btn" id="btnUpt">수정</button>
+            </div>
+             <div class="btn-wrapper">
+             <button class="btn" id="btnDel">삭제</button>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+      <section id="listSection">
+        <fieldset class="listField">
+          <legend>캐릭터 목록</legend>
+          <div class="listTitleRow">
+            <div class="listItem">
+              <div class="itemTitle text-wrapper">캐릭터 이름</div>
+            </div>
+            <div class="listItem">
+              <div class="itemTitle text-wrapper">캐릭터 클래스</div>
+            </div>
+            <div class="listItem">
+              <div class="itemTitle text-wrapper">캐릭터 성별</div>
+            </div>
+            <div class="listItem">
+              <div class="itemTitle text-wrapper">HP/MP</div>
+            </div>
+            <div class="listItem">
+              <div class="itemTitle text-wrapper">주스탯</div>
+            </div>
+            <div class="listItem">
+              <div class="itemTitle text-wrapper">캐릭터 생성일</div>
+            </div>
+          </div>
+          <div class="listDataBlock">
+            <!-- <div class="listDataRow">
+              <div class="listItem">
+                <div class="itemData text-wrapper">레이싱</div>
+              </div>
+              <div class="listItem">
+                <div class="itemData text-wrapper">15세</div>
+              </div>
+              <div class="listItem">
+                <div class="itemData text-wrapper">마리오 카트</div>
+              </div>
+            </div> -->
+          </div>
+        </fieldset>
+      </section>
+    </main>
+    <footer>
+      <div>made 2026-01-12</div>
+    </footer>
+  </body>
 </html>
-<script src=""></script>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/0108-1.js"></script>
